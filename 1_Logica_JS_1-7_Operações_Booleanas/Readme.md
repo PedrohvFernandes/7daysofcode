@@ -1,3 +1,7 @@
+<p align="center">
+  <img height="100" src="https://github.com/PedrohvFernandes/7daysofcode/blob/main/screenshot/Layout.png">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
 Chegou a hora, Pedro Henrique Vieira Fernandes! Você vai começar a sua jornada no #7DaysOfCode ;)
 
 Este primeiro dia é super importante! Ao final dele, você terá um novo conhecimento que é essencial para os próximos desafios.
