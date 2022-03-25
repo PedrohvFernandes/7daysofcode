@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body{
+    background-color: black;
+    font-family: sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header div{
+    width: 50%;
+    background-color: rgb(124, 0, 0);
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+header div h1{
+    font-size: 40px;
+}
