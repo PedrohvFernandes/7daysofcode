@@ -1,30 +1,252 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #fff;
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
 }
 
-body{
-    background-color: black;
-    font-family: sans-serif;
+body {
+  background-color: black;
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
 }
 
-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
+button {
+  cursor: pointer;
+  padding: 20px;
+  font-size: 20px;
+  color: black;
+  background-color: rgb(212, 208, 208);
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+  font-family: "Orbitron", sans-serif;
+  transition: all 0.5s ease;
 }
 
-header div{
-    width: 50%;
-    background-color: rgb(124, 0, 0);
-    padding: 10px;
-    border-radius: 15px;
-    text-align: center;
+button:disabled {
+  cursor: no-drop;
+}
+button:disabled:hover {
+  cursor: no-drop;
+  background-color: rgb(212, 208, 208);
+  color: black;
+  transform: none;
 }
 
-header div h1{
-    font-size: 40px;
+button:hover {
+  background-color: rgb(92, 3, 3);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+input {
+  padding: 20px;
+  font-size: 20px;
+  color: black;
+  background-color: rgb(243, 241, 241);
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+  font-family: "Orbitron", sans-serif;
+  margin: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+header div {
+  width: 50%;
+  background-color: rgb(124, 0, 0);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+header div h1 {
+  font-size: 40px;
+}
+
+.div-nome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+/* A area da linguagens */
+.area-linguagens {
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+
+.div-paragrafo-one {
+  margin: 10px 10px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.nome-do-usuario {
+  margin-bottom: 10px;
+}
+
+/* Linguagem da area selecionada */
+.linguagens-das-areas {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linguagens-das-areas div {
+  margin: 10px;
+}
+
+.front-selecionada {
+  display: none;
+}
+.back-selecionada {
+  display: none;
+}
+
+/* Especialização */
+.especializacao {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.especializacao h2 {
+  margin-bottom: 10px;
+}
+.buttons-especializar {
+  display: flex;
+}
+
+.especializar-back {
+  display: none;
+}
+
+.especializar-front {
+  display: none;
+}
+
+.especializar-fullstack {
+  display: none;
+}
+
+/* Lista de linguagens */
+.lista-de-linguagens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.lista-de-linguagens button {
+  margin: 10px;
+}
+
+.lista {
+  font-size: 25px;
+}
+/* Seta do continue, span efects, X */
+.span-efects {
+  animation: piscaSpan 2s ease-in-out infinite;
+  text-transform: uppercase;
+}
+
+@keyframes piscaSpan {
+  0% {
+    color: rgb(151, 1, 1);
+  }
+}
+
+/* Animar com o polygon: https://www.youtube.com/watch?v=T4ApXdYyYTE */
+.div-svg {
+  display: flex;
+  align-items: center;
+  height: 25vh;
+}
+
+.seta-poly {
+  stroke-dasharray: 84;
+  animation: dash 3.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+}
+
+@keyframes dash {
+  /* 0%{
+        stroke-dashoffset: 0;  
+    } */
+  /* 100%{
+        stroke-dashoffset: 169;
+    } */
+  to {
+    stroke-dashoffset: 169;
+  }
+}
+
+.continue {
+  font-size: 7px;
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.button-resetar {
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  margin-bottom: 10px;
+}
+.button-resetar h2 {
+  margin-bottom: 10px;
+}
+.button-x-div {
+  display: flex;
+}
+.button-x-div button {
+  margin-right: 10px;
+}
+/* Animar com path */
+/* https://css-tricks.com/almanac/properties/s/stroke-dashoffset/ */
+/* https://www.portalgsti.com.br/2018/04/como-animar-linhas-de-um-svg-so-com-css.html */
+.animate-svg-x {
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.animate-svg-x path {
+  stroke-width: 2px;
+  stroke: rgb(170, 3, 3);
+  width: 100%;
+  height: 100%;
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 1000;
+  animation: dashX 2.5s ease-in-out forwards infinite;
+}
+
+@keyframes dashX {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  70% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }

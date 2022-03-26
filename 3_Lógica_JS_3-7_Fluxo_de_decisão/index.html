@@ -13,15 +13,129 @@
         <h1>As linguagens de programação</h1>
       </div>
     </header>
-    <section class="area-linguagens">
-      <div class="">
-          <p>Você quer seguir para a área de Front-End ou seguir para a área de Back-End ?</p>
+
+    <div class="div-nome">
+      <h2>Qual é o seu nome</h2>
+      <input type="text" name="nome" id="nome" placeholder="Seu nome" />
+      <button disabled onclick="mostrarGame(event)" id="button-nome">OK</button>
+    </div>
+
+    <section class="area-linguagens" id="area-linguagens">
+      <div class="div-paragrafo-one">
+        <p id="nome-do-usuario" class="nome-do-usuario"></p>
+        <p>
+          Você quer seguir para a área de
+          <span class="span-efects"> Front-End </span> ou seguir para a área de
+          <span class="span-efects"> Back-End </span> ?
+        </p>
       </div>
       <div>
-        <button>Front-end</button>
-        <button>Back-end</button>
+        <button id="button-front" onclick="qualCaminho('front')">
+          Front-end
+        </button>
+        <button id="button-back" onclick="qualCaminho('back')">Back-end</button>
       </div>
     </section>
+
+    <section class="linguagens-das-areas" id="linguagens-das-areas">
+      <h2 class="escolher-a-linguagem">
+        Muito bem, quais destas tecnologias gostaria de aprender primeiro?
+      </h2>
+      <div class="front-selecionada" id="front-selecionada">
+        <button
+          class="button-opcoes-linguagens-react"
+          onclick="qualLinguagem('react')"
+        >
+          React
+        </button>
+        <button
+          class="button-opcoes-linguagens-vue"
+          onclick="qualLinguagem('vue')"
+        >
+          Vue
+        </button>
+      </div>
+
+      <div class="back-selecionada" id="back-selecionada">
+        <button
+          class="button-opcoes-linguagens-c"
+          onclick="qualLinguagem('c#')"
+        >
+          C#
+        </button>
+        <button
+          class="button-opcoes-linguagens-java"
+          onclick="qualLinguagem('java')"
+        >
+          Java
+        </button>
+      </div>
+    </section>
+
+    <section class="especializacao" id="especializacao">
+      <h2 class="escolher-a-especializacao" id="escolher-a-especializacao"></h2>
+      <div class="buttons-especializar">
+        <button
+          class="especializar-back"
+          id="especializar-front"
+          onclick="caminhoSelecionado('front-end')"
+        >
+          Especializar em front-end
+        </button>
+        <button
+          class="especializar-back"
+          id="especializar-back"
+          onclick="caminhoSelecionado('back-end')"
+        >
+          Especializar em back-end
+        </button>
+        <button
+          class="especializar-fullstack"
+          id="especializar-fullstack"
+          onclick="caminhoSelecionado('full-stack')"
+        >
+          Se tornar full stack
+        </button>
+      </div>
+    </section>
+
+    <section class="lista-de-linguagens" id="lista-de-linguagens"></section>
+
+    <section class="consideracao-final" id="consideracao-final"></section>
+
+    <div class="button-resetar" id="button-resetar">
+      <h2>Caso deseje reiniciar o processo:</h2>
+      <div class="button-x-div">
+        <button class="reset" id="reset" onclick="resetar()">Recomeçar</button>
+        <div class="animate-svg-x">
+          <?xml version="1.0" ?><svg
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                }
+              </style>
+            </defs>
+            <title />
+            <g data-name="Layer 2" id="Layer_2">
+              <!-- Com o fill none a gente tira o preenchimento, com isso o que vai preencher ele é o que vai estar no css -->
+              <path
+                fill="#ff"
+                d="M4,29a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42l24-24a1,1,0,1,1,1.42,1.42l-24,24A1,1,0,0,1,4,29Z"
+              />
+              <path
+                fill="#fff"
+                d="M28,29a1,1,0,0,1-.71-.29l-24-24A1,1,0,0,1,4.71,3.29l24,24a1,1,0,0,1,0,1.42A1,1,0,0,1,28,29Z"
+              />
+            </g>
+            <g id="frame"><rect class="cls-1" height="32" width="32" /></g>
+          </svg>
+        </div>
+      </div>
+    </div>
     <script src="fluxoDecisao.js"></script>
   </body>
 </html>
