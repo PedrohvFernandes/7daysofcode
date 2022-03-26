@@ -171,7 +171,7 @@ function mensagemListaDelinguagens(caminho) {
 
   listaDeLinguagens.innerHTML = `
   
-  <h2 class="mensagem-lista-de-linguagens">Muito bom, vejo que você optou por se especializar em ${caminho}</h2>
+  <h2 class="mensagem-lista-de-linguagens">Muito bom, vejo que você optou por se especializar em <span class='span-efects'> ${caminho} <span class='span-efects'></h2>
   
   <label> Agora informe mais tecnologias que você gostaria de aprender:  </label>
   <input
