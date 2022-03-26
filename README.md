@@ -9,6 +9,14 @@
 
 ### Link da inscrição: https://7daysofcode.io/matricula/logica-programacao
 
+### 3 desafio
+<p align="center">
+  <img src="https://github.com/PedrohvFernandes/7daysofcode/blob/main/screenshot/Screen3.png">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+### Testar: https://codepen.io/pedrohvfernandes/pen/rNpyQGo
+
 ## 👨‍💻 Autor:
 - Linkedin: https://www.linkedin.com/in/pedro-henrique-vieira-fernandes
 - Git: https://github.com/PedrohvFernandes
