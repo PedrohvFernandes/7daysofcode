@@ -1,0 +1,112 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: rgb(236, 151, 151);
+}
+
+button{
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.adicionar-itens:hover{
+  background-color: rgb(250, 107, 174);
+  color: #fff;
+}
+.finalizar:hover{
+  background-color: green;
+  color: #fff;
+}
+
+.limpar:hover, .remover:hover{
+  background-color: rgb(158, 3, 3);
+  color: #fff;
+}
+
+
+button:disabled:hover{
+  background-color: #efefef4d;
+  color: #1010104d;
+  cursor: not-allowed;
+}
+
+input, select{
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+}
+
+input:focus, select:focus{
+  outline: none;
+}
+
+
+header{
+  display: flex;
+  justify-content: center;
+}
+
+p, label, ul{
+  font-size: 20px;
+}
+
+ul{
+  margin-left: 10px;
+}
+
+li{
+  list-style: none;
+  font-size: 18px;
+  margin-left: 30px;
+  border-bottom: 1px solid black;
+  width: 10%;
+}
+
+.title-lista-de-compras{
+  border-bottom: 1px black solid;
+  text-align: center;
+  width: 50%;
+}
+
+.title{
+  margin-bottom: 10px;
+}
+
+.vamos-a-compra{
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.inputs{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.inputs label{
+  /* margin-top: 10px;
+  margin-bottom: 10px; */
+  margin: 10px 0 10px;
+}
+
+.label-categorias{
+  margin: 10px 0 10px;
+}
+
+.buttons{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.buttons button{
+  margin-top: 10px;
+}
+

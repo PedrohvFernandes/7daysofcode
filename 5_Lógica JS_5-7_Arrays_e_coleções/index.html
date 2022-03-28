@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>#7DaysOfCode - Lógica JS 5/7:</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+    <body>
+      <header>
+        <div class='title-lista-de-compras'>
+          <h1 class='title'> Lista de compras - Lógica JS 5/7:</h1>
+        </div>
+      </header>
+      <main class="content" id="content">
+        <div class="vamos-a-compra">
+          <p>Vamos ao supermercado</p>
+          <p>Aqui você podera realizar a sua listinha de compras</p>
+        </div>
+        <div class='inputs'>
+         <label for="">1º Produto: </label> <input type="text" name="produto" id="produto">
+         <label for="">2º Quantidade: </label>  <input type="number" min="1" name="quantidade" id="quantidade">
+         <div id="divCategorias"></div>
+         <p id="erro"></p>
+        </div>
+        
+        <div class='buttons'>
+          <button disabled onclick="adicionarProduto()" class="adicionar-itens" id="adicionar-itens">Adicionar item</button>
+          <button disabled onclick="exibirLista()" class="finalizar" id="finalizar">Finalizar</button>
+          <button class="limpar" onclick="limparCampos()">Resetar campos</button>
+        </div>
+      </main>
+    </body>
+  <script src="arraysColecoes.js"></script>
+</html>
