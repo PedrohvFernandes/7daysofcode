@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>#7DaysOfCode - Lógica JS 5/7:</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <div class="title-calculadora">
+        <h1>Calculadora:</h1>
+      </div>
+    </header>
+    <div class="content">
+      <main>
+        <div class="inputs">
+          <label>1º valor</label>
+          <input type="number" name="primeiro-valor" id="primeiro-valor" />
+          <label>2º valor</label>
+          <input type="number" name="segundo-valor" id="segundo-valor" />
+        </div>
+        <div class="buttons">
+          <button id="mais" disabled onclick="calculadora('+')">+</button>
+          <button id="menos" disabled onclick="calculadora('-')">-</button>
+          <button id="divisao" disabled onclick="calculadora('/')">/</button>
+          <button id="multiplica" disabled onclick="calculadora('*')">*</button>
+          <button id="sair" onclick="sair()">SAIR</button>
+          <button id="reset" onclick="resetar()">RESETAR CAMPOS</button>
+        </div>
+      </main>
+      <p class="message" id="message"></p>
+    </div>
+  </body>
+  <script src="funcoes.js"></script>
+</html>
