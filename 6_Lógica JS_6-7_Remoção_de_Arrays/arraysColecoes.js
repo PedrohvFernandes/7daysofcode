@@ -101,8 +101,6 @@ function adicionarProduto() {
       validaLista();
       limparCampos();
       erro.style.display = "none";
-      listaAteAgora(categoria);
-
     } else {
       erro.innerHTML =
         "Ja existe esse produto com a mesma quantidade, insira um produto diferente ou o mesmo so que de quantidade diferente";
@@ -112,35 +110,49 @@ function adicionarProduto() {
   }
 }
 
-function listaAteAgora(categoriaSelecionada){
-  let listaAteAgora = document.querySelector("#lista-ate-agora");
-  for (let i in listaDeCompras) {
-    listaAteAgora.innerHTML = `<ul> ${listaDeCompras[i].categoria} :</ul>`;
-    for (let j in listaDeCompras) {
-      if (listaDeCompras[j].categoria === categoriaSelecionada){
-      listaAteAgora.innerHTML += `<li> ${listaDeCompras[j].produto} : ${listaDeCompras[j].quantidade} </li>`;
-    }
+function excluirElementoTela() {
+  let htmlCode = "";
+
+  htmlCode += `
+  <div>
+    Item: <select name='itemSelectProduto' id='itemSelectProduto'>`;
+
+  for (let item in listaDeCompras) {
+    htmlCode += `
+      <option value='${listaDeCompras[item].produto}'>
+      Categoria: ${listaDeCompras[item].categoria} | Produto : ${listaDeCompras[item].produto} | Quantidade: ${listaDeCompras[item].quantidade}
+      </option>
+      `;
   }
-  }
+  htmlCode += `
+    </select>
+    <button class="remover" onclick='excluirElemento()' >Excluir item</button>
+    <button class="adicionar-itens" onclick='fecharTelaExcluirElemento()'>Fechar</button> 
+  </div>
+  `;
+
+  let listaAteAgora = document.getElementById("lista-ate-agora");
+  listaAteAgora.style.display = "flex";
+  listaAteAgora.innerHTML += htmlCode;
 }
 
-function removerProduto() {
-  let produto = document.getElementById("produto").value;
-  let quantidade = document.getElementById("quantidade").value;
-  let categoria = document.getElementById("categoriasSelect").value;
-  if (produto !== "" || quantidade !== "") {
-    if (jaExiste(produto, quantidade)) {
-      for (let i in listaDeCompras) {
-        if (
-          listaDeCompras[i].produto === produto &&
-          listaDeCompras[i].quantidade === quantidade
-        ) {
-          listaDeCompras.splice(i, 1)[0];
-          listaAteAgora(categoria)
-        }
-      }
+function excluirElemento() {
+  let item = document.getElementById("itemSelectProduto").value;
+
+  for (let i in listaDeCompras) {
+    if (listaDeCompras[i].produto.toLowerCase() === item.toLowerCase()) {
+      listaDeCompras.splice(i, 1);
     }
   }
+  let listaAteAgora = document.getElementById("lista-ate-agora");
+  listaAteAgora.innerHTML = '';
+  excluirElementoTela();
+}
+
+function fecharTelaExcluirElemento() {
+  let listaAteAgora = document.getElementById("lista-ate-agora");
+  listaAteAgora.innerHTML = '';
+  listaAteAgora.style.display = "none";
 }
 
 function exibirLista() {
@@ -156,7 +168,7 @@ function exibirLista() {
   for (let i in categoriasSelecionadas) {
     htmlCode += `<ul> ${categoriasSelecionadas[i]} :</ul>`;
     for (let j in listaDeCompras) {
-      if (listaDeCompras[j].categoria == categoriasSelecionadas[i]) {
+      if (listaDeCompras[j].categoria === categoriasSelecionadas[i]) {
         htmlCode += `<li> ${listaDeCompras[j].produto} : ${listaDeCompras[j].quantidade} </li>`;
       }
     }

@@ -110,3 +110,18 @@ li{
   margin-top: 10px;
 }
 
+.lista-ate-agora{
+  display: none;
+  justify-content: center;
+  background-color: rgba(236, 191, 191, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 500px;
+  left: 50px;
+  right: 50px;
+  margin: auto;
+  width: 60%;
+
+}
+
